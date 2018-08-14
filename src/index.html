@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>test</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- openlayers v.5.1.3 -->
+  <script src="lib/ol/build/ol.js"></script>
+  <link rel="stylesheet" href="lib/ol/css/ol.css">
+  <style>
+    .mynavbar {
+      height: 10vh;
+      background-color: #00FFFF;
+    }
+
+    .mymap {
+      /* need to take into account the navbar height */
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class=" navbar navbar-expand-md navbar-light fixed-top bg-light shadow">
+    <span class="ml-1 ">Test</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Recherche">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<!--
+<nav class="mynavbar navbar navbar-expand-md navbar-light fixed-top flex-md-nowrap p-0 shadow">
+  <span class="ml-1 ">Test</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <input class="form-control form-control w-100" type="text" placeholder="Recherche" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+-->
+<div class="container-fluid h-100">
+
+  <main role="main" class="col-12 ml-sm-auto">
+    <div class="mymap w-100" id="map" width="900" height="400"></div>
+  </main>
+</div>
+
+<script type="text/javascript">
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([37.41, 8.82]),
+      zoom: 4
+    })
+  });
+</script>
+
+</body>
+</html>

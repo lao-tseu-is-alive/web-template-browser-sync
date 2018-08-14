@@ -1,0 +1,23 @@
+{
+  "name": "web-template-browser-sync",
+  "version": "1.0.0",
+  "description": "a simple web template using browser sync for fast prototyping",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "browser-sync src -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lao-tseu-is-alive/web-template-browser-sync.git"
+  },
+  "author": "lao.tseu.is.alive@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lao-tseu-is-alive/web-template-browser-sync/issues"
+  },
+  "homepage": "https://github.com/lao-tseu-is-alive/web-template-browser-sync#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6"
+  }
+}

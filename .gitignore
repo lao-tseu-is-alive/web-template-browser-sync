@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+# jetbrains project
+.idea
+/src/lib/v5.1.3/apidoc/
+/src/lib/v5.1.3/doc/
+/src/lib/v5.1.3/examples/
